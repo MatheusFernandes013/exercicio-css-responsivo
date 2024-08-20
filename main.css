@@ -17,8 +17,38 @@ header .container {
     align-items: center;
 }
 
-header {
-    padding: 16px 0 0;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 56px;
+header, footer{
+    padding: 16px 0;
+    background-color: rgb(48, 48, 177);
+    color: #fff;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+}
+
+header nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+section div {
+    margin-left: 32px;
+}
+
+section h2 {
+    color: rgb(48, 48, 177);
+    padding: 16px 0;
+    border-bottom: 4px solid rgb(48, 48, 177);
+}
+
+section p {
+    padding: 16px 0;
 }
