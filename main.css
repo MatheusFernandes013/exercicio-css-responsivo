@@ -33,7 +33,7 @@ header nav li a {
     text-decoration: none;
 }
 
-section .container {
+.about {
     display: flex;
     justify-content: space-between;
     padding: 24px 0;
@@ -47,8 +47,45 @@ section h2 {
     color: rgb(48, 48, 177);
     padding: 16px 0;
     border-bottom: 4px solid rgb(48, 48, 177);
+    margin-bottom: 16px;
 }
 
 section p {
     padding: 16px 0;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 1%;
+}
+
+.lista-tenis li {
+    list-style: none;
+}
+
+.lista-tenis li img{
+    max-width: 100%;
+}
+
+.lista-tenis h3 {
+    font-size: 1.71em;
+}
+
+.lista-tenis p {
+    font-size: 1em;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(48, 48, 177);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
 }
