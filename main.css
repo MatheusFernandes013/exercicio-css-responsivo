@@ -56,7 +56,7 @@ section p {
 
 .container-grid{
     display: grid;
-    grid-template-columns: repeat(4, 24.5%);
+    grid-template-columns: repeat(4, 24.25%);
     column-gap: 1%;
 }
 
@@ -88,4 +88,55 @@ button {
     font-style: italic;
     cursor: pointer;
     border-radius: 6px;
+}
+
+#products {
+    margin-bottom: 32px;
+}
+
+@media screen and(max-width: 640px) {
+    .container{
+        max-width: 640px;
+        max-width: 90%;
+    }
+    header .container {
+        display: block;
+    }
+
+    header nav li {
+        display: block;
+        margin-left: 16px;
+    }
+
+    section div {
+        margin-left: 0;
+    }
+
+    .about {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    section div {
+        margin-left: 0;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .container-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 2%;
+    }
+
+    .lista-tenis h3 {
+        font-size: 1.4em;
+    }
 }
