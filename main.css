@@ -1,14 +1,19 @@
 * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+body, html {
+    overflow-x: hidden; /* Evita overflow horizontal */
 }
 
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 16px; /* Adiciona padding lateral */
 }
 
 header .container {
@@ -17,7 +22,7 @@ header .container {
     align-items: center;
 }
 
-header, footer{
+header, footer {
     padding: 16px 0;
     background-color: rgb(48, 48, 177);
     color: #fff;
@@ -41,6 +46,7 @@ header nav li a {
 
 section div {
     margin-left: 32px;
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse o container */
 }
 
 section h2 {
@@ -54,18 +60,21 @@ section p {
     padding: 16px 0;
 }
 
-.container-grid{
+.container-grid {
     display: grid;
-    grid-template-columns: repeat(4, 24.25%);
-    column-gap: 1%;
+    grid-template-columns: repeat(4, 24%);
+    gap: 2%;
+    width: 100%;
 }
 
 .lista-tenis li {
     list-style: none;
+    max-width: 100%; /* Garante que cada item não ultrapasse a largura do container */
 }
 
-.lista-tenis li img{
+.lista-tenis li img {
     max-width: 100%;
+    height: auto; /* Garante que as imagens não causem overflow */
 }
 
 .lista-tenis h3 {
@@ -94,31 +103,8 @@ button {
     margin-bottom: 32px;
 }
 
-@media screen and(max-width: 640px) {
-    .container{
-        max-width: 640px;
-        max-width: 90%;
-    }
-    header .container {
-        display: block;
-    }
-
-    header nav li {
-        display: block;
-        margin-left: 16px;
-    }
-
-    section div {
-        margin-left: 0;
-    }
-
-    .about {
-        display: block;
-    }
-}
-
 @media screen and (min-width: 641px) and (max-width: 1023px) {
-    .container{
+    .container {
         max-width: 90%;
     }
 
@@ -130,13 +116,55 @@ button {
         display: block;
     }
 
-    .container-grid{
-        display: grid;
+    .container-grid {
         grid-template-columns: repeat(2, 48%);
-        column-gap: 2%;
+        gap: 4%;
     }
 
     .lista-tenis h3 {
         font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 100%;
+        padding: 0 8px; /* Reduz o padding para dispositivos pequenos */
+    }
+
+    header .container {
+        display: flex;
+    }
+
+    header nav li {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+
+    section div {
+        margin-left: 0;
+        max-width: 100%; /* Garante que o conteúdo não ultrapasse a tela */
+    }
+
+    section img {
+        width: 100%;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .container-grid {
+        display: block;
+        width: 100%;
+    }
+
+    .lista-tenis li {
+        margin-bottom: 16px;
+    }
+
+    .lista-tenis h3 {
+        font-size: 1.2em;
     }
 }
