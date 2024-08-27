@@ -6,14 +6,14 @@
 }
 
 body, html {
-    overflow-x: hidden; /* Evita overflow horizontal */
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px; /* Adiciona padding lateral */
+    padding: 0 16px;
 }
 
 header .container {
@@ -46,7 +46,7 @@ header nav li a {
 
 section div {
     margin-left: 32px;
-    max-width: 100%; /* Garante que o conteúdo não ultrapasse o container */
+    max-width: 100%;
 }
 
 section h2 {
@@ -63,18 +63,18 @@ section p {
 .container-grid {
     display: grid;
     grid-template-columns: repeat(4, 24%);
-    gap: 2%;
+    gap: 1%;
     width: 100%;
 }
 
 .lista-tenis li {
     list-style: none;
-    max-width: 100%; /* Garante que cada item não ultrapasse a largura do container */
+    max-width: 100%;
 }
 
 .lista-tenis li img {
     max-width: 100%;
-    height: auto; /* Garante que as imagens não causem overflow */
+    height: auto;
 }
 
 .lista-tenis h3 {
@@ -82,7 +82,7 @@ section p {
 }
 
 .lista-tenis p {
-    font-size: 1em;
+    font-size: 0.75em;
 }
 
 button {
@@ -118,18 +118,18 @@ button {
 
     .container-grid {
         grid-template-columns: repeat(2, 48%);
-        gap: 4%;
+        gap: 2%;
     }
 
     .lista-tenis h3 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 
 @media screen and (max-width: 640px) {
     .container {
-        max-width: 100%;
-        padding: 0 8px; /* Reduz o padding para dispositivos pequenos */
+        max-width: 90%;
+        padding: 0 8px;
     }
 
     header .container {
@@ -144,7 +144,7 @@ button {
 
     section div {
         margin-left: 0;
-        max-width: 100%; /* Garante que o conteúdo não ultrapasse a tela */
+        max-width: 100%;
     }
 
     section img {
